@@ -1,0 +1,71 @@
+
+body{
+    background-color:black;
+}
+
+#game{
+    width: 1650px;
+    height: 650px;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 1px solid green;
+    background-color: green;
+}
+
+#character{
+    width: 200px;
+    height: 120px;
+    position:absolute;
+    top: 525px; /*game height - character height (200 - 50)*/
+}
+
+#block{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 500px; /*game height - character height - block height (200 - 50 - 20)*/
+    left: 1650px; /*game width - block width */
+    animation: block 2s infinite linear;
+}
+
+@keyframes jump{
+    0%{top: 525px;}
+    50%{top: 300px;}
+    65%{top: 300px;}
+    100%{top: 525px;}
+}
+
+@keyframes block{
+    0%{left: 1650px} 
+    100%{left: -50px}
+}
+
+.animate{
+    animation: jump 650ms linear;
+}
+
+#barrera{
+    border: 1px solid red;
+}
+
+
+#Wrapper_marcador{
+    border: 2px solid orange;
+    display: flex;
+}
+
+#marcador {
+    font-size: 50px;
+    color:white;
+    position: left;
+    border: 2px solid orange;
+}
+
+#puntuacion {
+    color: white;
+    position: absolute;
+    border: 2px solid orange;
+    margin-left: 10px;
+    margin-top: 50%;
+}
